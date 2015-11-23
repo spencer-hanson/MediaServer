@@ -1,0 +1,7 @@
+rar
+7z
+zip
+iso
+tar
+gz
+z
