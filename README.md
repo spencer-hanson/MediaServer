@@ -1,4 +1,7 @@
 #Media Server
+<img src="media/demo_latest.gif" width="600" height="500" />
+<br />
+<hr />
 ##Run the install script
 To install the server, use the terminal and run
 ```shell
