@@ -1,5 +1,5 @@
 #Media Server
-<img src="media/demo_latest.gif" width="600" height="500" />
+<img src="media/demo_latest.gif" width="800" height="500" />
 <br />
 <hr />
 ##Run the install script
