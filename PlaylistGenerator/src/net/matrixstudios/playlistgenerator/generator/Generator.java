@@ -24,7 +24,7 @@ public class Generator {
 
         try {
             plReader = null;
-            plReader = new PlaylistReader(playlistSource);
+            plReader = new PlaylistReader(this.playlistSource);
         } catch(FileNotFoundException e) {
             System.err.println("File not found!");
             throw e;
@@ -45,10 +45,11 @@ public class Generator {
 
         FileFinder fileFinder = new FileFinder(searchDir);
         for(PlaylistSong songName : songNames) {
-            File found1 = fileFinder.getMatch(songName.getBandName());
-            File found2 = fileFinder.getMatch(songName.getSongName());
-            System.out.println("Band name: \'" + songName.getBandName() + "\' match with: \'" + found1.getAbsolutePath());
-            //System.out.println("Song name: \'" + songName.getSongName() + "\' match with: \'" + found2.getAbsolutePath());
+            File found1 = fileFinder.getMatch(songName.getBandName(), false);
+            FileFinder songFinder = new FileFinder(found1);
+            File found2 = songFinder.getMatch(songName.getSongName(), true);
+            System.out.println("Band name: \'" + songName.getBandName() + "\' match with: \'" + found1.getName() + "\' file: \'" + found1.getAbsolutePath()+ "\'");
+            System.out.println("Song name: \'" + songName.getSongName() + "\' match with: \'" + found2.getName() + "\' file: \'" + found2.getAbsolutePath() + "\'");
         }
 
         return songFiles;
