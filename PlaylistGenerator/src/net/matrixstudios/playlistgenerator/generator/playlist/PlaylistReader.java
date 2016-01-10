@@ -1,7 +1,8 @@
-package net.matrixstudios.playlistgenerator.generator;
+package net.matrixstudios.playlistgenerator.generator.playlist;
+
+import net.matrixstudios.playlistgenerator.generator.playlist.PlaylistSong;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,11 +26,11 @@ public class PlaylistReader {
         initReader();
     }
 
-    public ArrayList<String> readPlaylist() throws IOException {
-        ArrayList<String> files = new ArrayList<String>();
+    public ArrayList<PlaylistSong> readPlaylist() throws IOException {
+        ArrayList<PlaylistSong> files = new ArrayList<PlaylistSong>();
         String line = "";
         while((line = bufferedReader.readLine()) != null) {
-            files.add(line);
+            files.add(new PlaylistSong(line));
         }
         return files;
     }

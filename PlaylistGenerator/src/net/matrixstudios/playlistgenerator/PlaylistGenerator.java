@@ -22,7 +22,7 @@ public class PlaylistGenerator implements ActionListener {
 
     /** Tests if the list has any errors or not, True - good list. False - bad list */
     private boolean testList() {
-        String testSource = "";
+        String testSource = "C:\\Users\\M4trix\\Desktop\\test\\test.txt";
         String testFolder = "D:\\Music";
         boolean returnVal = true;
 
@@ -30,6 +30,7 @@ public class PlaylistGenerator implements ActionListener {
             System.out.println("Testing List \'" + testSource + "\'\nAnd Folder \'" + testFolder + "\'");
             System.out.flush();
             Generator.printList(new Generator(testSource, testFolder).getGenerateList());
+            //Generator.printPlaylist(new Generator(testSource, testFolder).readPlaylist());
             System.out.println("Done Testing List");
         } catch(FileNotFoundException e) {
             returnVal = false;

@@ -1,5 +1,9 @@
 package net.matrixstudios.playlistgenerator.generator;
 
+import net.matrixstudios.playlistgenerator.generator.filefinder.FileFinder;
+import net.matrixstudios.playlistgenerator.generator.playlist.PlaylistReader;
+import net.matrixstudios.playlistgenerator.generator.playlist.PlaylistSong;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -31,21 +35,41 @@ public class Generator {
         }
     }
 
-    private ArrayList<String> readPlaylist() throws IOException {
+    public ArrayList<PlaylistSong> readPlaylist() throws IOException {
        return plReader.readPlaylist();
     }
 
     public ArrayList<File> getGenerateList() throws IOException {
         ArrayList<File> songFiles = new ArrayList<File>();
+        ArrayList<PlaylistSong> songNames = readPlaylist();
+
+        FileFinder fileFinder = new FileFinder(searchDir);
+        for(PlaylistSong songName : songNames) {
+            File found1 = fileFinder.getMatch(songName.getBandName());
+            File found2 = fileFinder.getMatch(songName.getSongName());
+            System.out.println("Band name: \'" + songName.getBandName() + "\' match with: \'" + found1.getAbsolutePath());
+            //System.out.println("Song name: \'" + songName.getSongName() + "\' match with: \'" + found2.getAbsolutePath());
+        }
 
         return songFiles;
     }
 
     public static void printList(ArrayList<File> songFiles) {
         int i = 0;
+        System.out.println("Printing Song File List...");
         for(File file : songFiles) {
             System.out.println(i++ + ". " + file.getAbsoluteFile().toString());
         }
+        System.out.println("Done Printing Song File List...");
+    }
+
+    public static void printPlaylist(ArrayList<PlaylistSong> songFiles) {
+        int i = 0;
+        System.out.println("Printing Playlist...");
+        for(PlaylistSong song : songFiles) {
+            System.out.println(i++ + ". " + song.toString());
+        }
+        System.out.println("Done Printing Playlist");
     }
 
 
