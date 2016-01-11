@@ -1,5 +1,6 @@
 package net.matrixstudios.playlistgenerator.generator.filefinder;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -16,12 +17,17 @@ public class FilenameFilter {
         return Pattern.compile(regex).matcher(filename).matches();
     }
 
-    private static final String[] trackNumRegexes = {"(\\d{1,})(\\s?)(\\-)(\\s?)(.*)"};
+    private static final String[] trackNumRegexes = {
+            "(\\d{1,})(\\s?)(\\-?)(\\s?)", //example: 01 - Song.mp3
+            "(.*)(\\s{1,})(\\-)(\\s{1,})(.*)(\\s{1,})(\\-)(\\s{1,})(\\d{1,})(\\s{1,})(\\-)(\\s{1,})" //example: Band - Album - 01 - Song.mp3
+
+    };
 
     public static boolean hasTrackNumInfront(String filename) {
         boolean result = false;
         for(String regex : trackNumRegexes) {
-            if(checkPattern(regex, filename)) {
+            if(checkPattern(regex + "(.*)", filename)) {
+                //System.out.println("Matches regex: \'" + regex + "\'");
                 result = true;
             }
 
@@ -30,21 +36,44 @@ public class FilenameFilter {
         return result;
     }
 
-    public static String removeTrackNum(String filename) {
 
-        return "";
+    public static void testString(String str) {
+        boolean testTrack = FilenameFilter.hasTrackNumInfront(str);
+        System.out.println("Testing Original string: \'" + str + "\'");
+        System.out.println("Matches pattern: " +testTrack);
+        System.out.println("Removing extension: \'" + FilenameFilter.removeExtension(str) + "\'");
+        if(testTrack) {
+            System.out.println("Removing track num: \'" + FilenameFilter.removeTrackNum(str) + "\'");
+        }
+        System.out.println("Full func: \'" + FilenameFilter.filterFilename(str, false) + "\'");
+        System.out.println("---");
+     }
+
+
+    public static String removeTrackNum(String filename) {
+        int end = -1;
+        for(String regex : trackNumRegexes) {
+            if(checkPattern(regex + "(.*)", filename)) {
+                regex = "\\b" + regex + "\\b";
+                Pattern p = Pattern.compile(regex);
+                Matcher m = p.matcher(filename);
+                if(m.find()) {
+                    end = m.end();
+                }
+            }
+        }
+        filename = filename.substring(end);
+        return filename;
     }
 
     public static String filterFilename(String filename, boolean isDirectory) {
         if(isDirectory) { return filename; }
-        filename = removeExtension(filename);
 
         if(hasTrackNumInfront(filename)) {
             filename = removeTrackNum(filename);
         }
 
-
-
+        filename = removeExtension(filename);
 
         return filename;
     }

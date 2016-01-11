@@ -1,8 +1,10 @@
 package net.matrixstudios.playlistgenerator;
 
 import net.matrixstudios.playlistgenerator.generator.Generator;
+import net.matrixstudios.playlistgenerator.generator.SongNotFoundException;
 import net.matrixstudios.playlistgenerator.gui.Window;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
@@ -21,20 +23,22 @@ public class PlaylistGenerator implements ActionListener {
 
 
     /** Tests if the list has any errors or not, True - good list. False - bad list */
-    private boolean testList() {
-        String testSource = "/mnt/SEAGATE/test.txt";
-        String testFolder = "/mnt/SEAGATE/Music";
+    private boolean runList(String source, String folder) {
+
         boolean returnVal = true;
 
         try {
-            System.out.println("Testing List \'" + testSource + "\'\nAnd Folder \'" + testFolder + "\'");
+            System.out.println("Testing List \'" + source + "\' in Folder \'" + folder + "\'");
             System.out.flush();
-            Generator.printList(new Generator(testSource, testFolder).getGenerateList());
-            Generator.printPlaylist(new Generator(testSource, testFolder).readPlaylist());
-            System.out.println("Done Testing List");
-        } catch(FileNotFoundException e) {
+            Generator.printList(new Generator(source, folder).getGenerateList());
+            System.out.println("Done Testing List!");
+        } catch (FileNotFoundException e) {
+            System.err.println("File not found: " + e.getMessage());
             returnVal = false;
-        }catch (Exception e) {
+        } catch(SongNotFoundException e) {
+            System.err.println("Song not found: \'" + e.getMissingSong().getSongName() + "\' by \'" + e.getMissingSong().getBandName() + "\'");
+            returnVal = false;
+        } catch (Exception e) {
             e.printStackTrace();
             System.exit(-1);
             returnVal = false;
@@ -48,7 +52,23 @@ public class PlaylistGenerator implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         String cmd = ae.getActionCommand().toLowerCase();
         if(cmd.equals("generate")) {
-            testList();
+
+            String testSource = "D:\\test.txt";
+            String testFolder = "D:\\Music";
+
+            runList(testSource, testFolder);
+        } else if(cmd.startsWith("playlist")) {
+            //open file finder here
+        } else if (cmd.startsWith("search folder")) {
+            //open file finder here
         }
+    }
+
+    private JComponent findComponentByActionCmd(String actionCmd) {
+        JTextField jt = null;
+        for(JComponent component : window.getDataComponents()) {
+            //if(component.get)
+        }
+        return null;
     }
 }

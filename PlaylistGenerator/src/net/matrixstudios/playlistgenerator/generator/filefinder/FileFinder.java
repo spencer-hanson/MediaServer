@@ -1,6 +1,7 @@
 package net.matrixstudios.playlistgenerator.generator.filefinder;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,27 +27,31 @@ public class FileFinder {
         this(new File(strDir));
     }
 
-    private File getMatch(String search, HashMap<String, File> namesDB) {
+    private File getMatch(String search, HashMap<String, File> namesDB) throws FileNotFoundException {
         File file = null;
         int smallestHam = Integer.MAX_VALUE;
         Iterator it = namesDB.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry<String, File> pair = (Map.Entry<String, File>)it.next(); //TODO? Sort by hamming size? (Smallest to largest)
             String foundName = FilenameFilter.filterFilename(pair.getKey(), pair.getValue().isDirectory());
-            int newHam = getHammingDist(search, foundName);
+            //if(!pair.getValue().isDirectory()) { FilenameFilter.testString(pair.getKey()); }
+            //if(!pair.getValue().isDirectory()) { System.out.println("Filename:\'" + pair.getKey() + "\' -> \'" + foundName + "\'"); }
+            int newHam = getHammingDist(search.toLowerCase(), foundName.toLowerCase());
             if(newHam < smallestHam) {
                 smallestHam = newHam;
                 file = pair.getValue();
             }
 
         }
-
+        if(smallestHam >= search.length()/4) {
+            throw new FileNotFoundException();
+        }
 
         return file;
     }
 
 
-    public File getMatch(String search, boolean recursive) {
+    public File getMatch(String search, boolean recursive) throws FileNotFoundException {
         if(!recursive) {
             return getMatch(search, names);
         } else {

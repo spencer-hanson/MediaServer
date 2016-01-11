@@ -3,6 +3,7 @@ package net.matrixstudios.playlistgenerator.generator;
 import net.matrixstudios.playlistgenerator.generator.filefinder.FileFinder;
 import net.matrixstudios.playlistgenerator.generator.playlist.PlaylistReader;
 import net.matrixstudios.playlistgenerator.generator.playlist.PlaylistSong;
+import net.matrixstudios.playlistgenerator.generator.playlist.PlaylistSongFile;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -26,10 +27,8 @@ public class Generator {
             plReader = null;
             plReader = new PlaylistReader(this.playlistSource);
         } catch(FileNotFoundException e) {
-            System.err.println("File not found!");
             throw e;
         } catch(IOException e) {
-            System.err.println("Error!");
             e.printStackTrace();
             throw e;
         }
@@ -39,27 +38,33 @@ public class Generator {
        return plReader.readPlaylist();
     }
 
-    public ArrayList<File> getGenerateList() throws IOException {
-        ArrayList<File> songFiles = new ArrayList<File>();
+    public ArrayList<PlaylistSongFile> getGenerateList() throws IOException, SongNotFoundException {
+        ArrayList<PlaylistSongFile> songs = new ArrayList<PlaylistSongFile>();
+
         ArrayList<PlaylistSong> songNames = readPlaylist();
 
         FileFinder fileFinder = new FileFinder(searchDir);
         for(PlaylistSong songName : songNames) {
-            File found1 = fileFinder.getMatch(songName.getBandName(), false);
-            FileFinder songFinder = new FileFinder(found1);
-            File found2 = songFinder.getMatch(songName.getSongName(), true);
-            System.out.println("Band name: \'" + songName.getBandName() + "\' match with: \'" + found1.getName() + "\' file: \'" + found1.getAbsolutePath()+ "\'");
-            System.out.println("Song name: \'" + songName.getSongName() + "\' match with: \'" + found2.getName() + "\' file: \'" + found2.getAbsolutePath() + "\'");
+            try {
+                File found1 = fileFinder.getMatch(songName.getBandName(), false);
+                FileFinder songFinder = new FileFinder(found1);
+                File found2 = songFinder.getMatch(songName.getSongName(), true);
+                songs.add(new PlaylistSongFile(songName.getSongName(), songName.getBandName(), found2));
+            } catch(FileNotFoundException e) {
+                throw new SongNotFoundException("Song not found:" + songName.toString(), songName);
+            }
+            //System.out.println("Band name: \'" + songName.getBandName() + "\' match with: \'" + found1.getName() + "\' file: \'" + found1.getAbsolutePath()+ "\'");
+            //System.out.println("Song name: \'" + songName.getSongName() + "\' match with: \'" + found2.getName() + "\' file: \'" + found2.getAbsolutePath() + "\'");
         }
 
-        return songFiles;
+        return songs;
     }
 
-    public static void printList(ArrayList<File> songFiles) {
+    public static void printList(ArrayList<PlaylistSongFile> songFiles) {
         int i = 0;
         System.out.println("Printing Song File List...");
-        for(File file : songFiles) {
-            System.out.println(i++ + ". " + file.getAbsoluteFile().toString());
+        for(PlaylistSongFile song : songFiles) {
+            System.out.println(i++ + ". " + song.toString());
         }
         System.out.println("Done Printing Song File List...");
     }

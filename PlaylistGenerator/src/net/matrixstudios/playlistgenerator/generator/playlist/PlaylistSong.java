@@ -14,6 +14,11 @@ public class PlaylistSong {
         bandName = dataList[1].trim();
     }
 
+    public PlaylistSong(String songName, String bandName) {
+        this.songName = songName;
+        this.bandName = bandName;
+    }
+
     public String getBandName() {
         return bandName;
     }
