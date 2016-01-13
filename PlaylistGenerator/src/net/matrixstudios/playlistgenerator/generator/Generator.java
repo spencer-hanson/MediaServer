@@ -38,7 +38,7 @@ public class Generator {
        return plReader.readPlaylist();
     }
 
-    public ArrayList<PlaylistSongFile> getGenerateList() throws IOException, SongNotFoundException {
+    public ArrayList<PlaylistSongFile> getGenerateList() throws IOException, SongNotFoundException, Exception {
         ArrayList<PlaylistSongFile> songs = new ArrayList<PlaylistSongFile>();
 
         ArrayList<PlaylistSong> songNames = readPlaylist();

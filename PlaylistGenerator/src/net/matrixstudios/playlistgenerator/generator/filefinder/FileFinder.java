@@ -1,5 +1,7 @@
 package net.matrixstudios.playlistgenerator.generator.filefinder;
 
+import net.matrixstudios.musicfileapi.MusicFileAPI;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -27,15 +29,24 @@ public class FileFinder {
         this(new File(strDir));
     }
 
-    private File getMatch(String search, HashMap<String, File> namesDB) throws FileNotFoundException {
+    private File getMatch(String search, HashMap<String, File> namesDB) throws FileNotFoundException, Exception {
         File file = null;
         int smallestHam = Integer.MAX_VALUE;
         Iterator it = namesDB.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry<String, File> pair = (Map.Entry<String, File>)it.next(); //TODO? Sort by hamming size? (Smallest to largest)
-            String foundName = FilenameFilter.filterFilename(pair.getKey(), pair.getValue().isDirectory());
-            //if(!pair.getValue().isDirectory()) { FilenameFilter.testString(pair.getKey()); }
-            //if(!pair.getValue().isDirectory()) { System.out.println("Filename:\'" + pair.getKey() + "\' -> \'" + foundName + "\'"); }
+            File tmpFile = pair.getValue();
+            String foundName = pair.getKey();
+            if(MusicFileAPI.isValidFile(tmpFile)) {
+                MusicFileAPI musicFile = new MusicFileAPI(tmpFile);
+                try {
+                    foundName = musicFile.getTitle();
+                } catch(NullPointerException e) {
+                    foundName = FilenameFilter.filterFilename(pair.getKey(), pair.getValue().isDirectory());
+                    e.printStackTrace();
+                }
+            }
+
             int newHam = getHammingDist(search.toLowerCase(), foundName.toLowerCase());
             if(newHam < smallestHam) {
                 smallestHam = newHam;
@@ -51,7 +62,7 @@ public class FileFinder {
     }
 
 
-    public File getMatch(String search, boolean recursive) throws FileNotFoundException {
+    public File getMatch(String search, boolean recursive) throws FileNotFoundException, Exception {
         if(!recursive) {
             return getMatch(search, names);
         } else {

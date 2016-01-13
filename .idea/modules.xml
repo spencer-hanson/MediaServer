@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MediaServer.iml" filepath="$PROJECT_DIR$/MediaServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MusicFileAPI/MusicFileAPI.iml" filepath="$PROJECT_DIR$/MusicFileAPI/MusicFileAPI.iml" />
       <module fileurl="file://$PROJECT_DIR$/PlaylistGenerator/PlaylistGenerator.iml" filepath="$PROJECT_DIR$/PlaylistGenerator/PlaylistGenerator.iml" />
     </modules>
   </component>

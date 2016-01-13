@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MusicFileAPI:jar">
+    <output-path>$PROJECT_DIR$/MusicFileAPI/bin</output-path>
+    <root id="archive" name="MusicFileAPI.jar">
+      <element id="module-output" name="MusicFileAPI" />
+    </root>
+  </artifact>
+</component>
