@@ -16,18 +16,17 @@ import java.util.Map;
 public class FileFinder {
 
     private HashMap<String, File> names;
+    private boolean fileOnly;
 
-    public FileFinder(File dir) throws IOException {
+    public FileFinder(File dir, boolean fileOnly) throws IOException {
         File[] files = dir.listFiles();
+        this.fileOnly = fileOnly;
         names = new HashMap<String, File>();
         for(File file : files) {
             names.put(file.getName(), file);
         }
     }
 
-    public FileFinder(String strDir) throws IOException {
-        this(new File(strDir));
-    }
 
     private File getMatch(String search, HashMap<String, File> namesDB) throws FileNotFoundException, Exception {
         File file = null;
@@ -37,14 +36,18 @@ public class FileFinder {
             Map.Entry<String, File> pair = (Map.Entry<String, File>)it.next(); //TODO? Sort by hamming size? (Smallest to largest)
             File tmpFile = pair.getValue();
             String foundName = pair.getKey();
+
             if(MusicFileAPI.isValidFile(tmpFile)) {
                 MusicFileAPI musicFile = new MusicFileAPI(tmpFile);
                 try {
                     foundName = musicFile.getTitle();
+
                 } catch(NullPointerException e) {
                     foundName = FilenameFilter.filterFilename(pair.getKey(), pair.getValue().isDirectory());
                     e.printStackTrace();
                 }
+            } else {
+                //System.out.println("Found file, but invalid type: " + tmpFile.getName());
             }
 
             int newHam = getHammingDist(search.toLowerCase(), foundName.toLowerCase());
@@ -66,14 +69,23 @@ public class FileFinder {
         if(!recursive) {
             return getMatch(search, names);
         } else {
-            HashMap<String, File> names_tmp = new HashMap<String, File>(names);
+            HashMap<String, File> names_tmp = new HashMap<String, File>();
+
+
             for(Map.Entry<String, File> pair : names.entrySet()) {
 
                 if(pair.getValue().isDirectory()) {
                     File dir = pair.getValue();
                     File[] files = dir.listFiles();
                     for(File file : files) {
-                        names_tmp.put(file.getName(), file);
+                        if(fileOnly) {
+                            if(!file.isDirectory()) {
+                                names_tmp.put(file.getName(), file);
+                            }
+                        } else {
+                            names_tmp.put(file.getName(), file);
+                        }
+
                     }
                 }
             }

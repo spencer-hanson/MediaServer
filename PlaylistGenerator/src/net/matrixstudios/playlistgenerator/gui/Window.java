@@ -17,7 +17,7 @@ public class Window extends JFrame {
     public static final int HEIGHT = 600;
 
     private PlaylistGenerator plGen;
-    private ArrayList<JComponent> dataComponents;
+    private ArrayList<TextField> dataComponents;
 
     public void initComponents() {
         getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
@@ -45,8 +45,7 @@ public class Window extends JFrame {
         return panel;
     }
     private JPanel createTextField(String name) {
-        JTextField jt = new JTextField();
-        jt.setActionCommand(name + ":textfield");
+        TextField jt = new TextField(name.toLowerCase() + ":textfield");
         jt.setEditable(false);
         jt.setBackground(Color.white);
         jt.setPreferredSize(new Dimension(WIDTH/2, 20));
@@ -59,7 +58,6 @@ public class Window extends JFrame {
     private JPanel createChooserButton(String name) {
         JButton button = createButton("Browse..");
         button.setActionCommand(name + ":button");
-        dataComponents.add(button);
         JPanel panel = createContainerPanel();
         panel.add(button);
         return panel;
@@ -71,7 +69,6 @@ public class Window extends JFrame {
                 BorderFactory.createTitledBorder("Find " + nameToFind + "..."));
         panel.setOpaque(true);
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
-
         panel.add(createTextField(nameToFind));
         panel.add(createChooserButton(nameToFind));
         return panel;
@@ -99,12 +96,12 @@ public class Window extends JFrame {
     public Window(PlaylistGenerator plGen) {
         super("Playlist Generator");
         this.plGen = plGen;
-        this.dataComponents = new ArrayList<JComponent>();
+        this.dataComponents = new ArrayList<TextField>();
         init();
 
     }
 
-    public ArrayList<JComponent> getDataComponents() {
+    public ArrayList<TextField> getDataComponents() {
         return dataComponents;
     }
 

@@ -7,28 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc910b13-4c8c-4444-b95a-8fe6048de821" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/MusicFileAPI_jar.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MusicFileAPI/MusicFileAPI.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MusicFileAPI/bin/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MusicFileAPI/src/META-INF/MANIFEST.MF" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MusicFileAPI/src/net/matrixstudios/musicfileapi/MusicFileAPI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/Main.class" afterPath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/Main.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/gui/TextField.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicFileAPI/bin/net/matrixstudios/musicfileapi/MusicFileAPI.class" afterPath="$PROJECT_DIR$/MusicFileAPI/bin/net/matrixstudios/musicfileapi/MusicFileAPI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/bin/MusicFileAPI.jar" afterPath="$PROJECT_DIR$/PlaylistGenerator/bin/MusicFileAPI.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/PlaylistGenerator.class" afterPath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/PlaylistGenerator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/generator/Generator.class" afterPath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/generator/Generator.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/generator/filefinder/FileFinder.class" afterPath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/generator/filefinder/FileFinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/generator/filefinder/FilenameFilter.class" afterPath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/generator/filefinder/FilenameFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc (Matrix-Surface's conflicted copy 2016-01-10).xml" afterPath="$PROJECT_DIR$/.idea/misc (Matrix-Surface's conflicted copy 2016-01-10).xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace (Matrix-Surface's conflicted copy 2016-01-10).xml" afterPath="$PROJECT_DIR$/.idea/workspace (Matrix-Surface's conflicted copy 2016-01-10).xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSong.class" afterPath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSong.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/gui/Window.class" afterPath="$PROJECT_DIR$/PlaylistGenerator/bin/net/matrixstudios/playlistgenerator/gui/Window.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/lib/MusicFileAPI.jar" afterPath="$PROJECT_DIR$/PlaylistGenerator/lib/MusicFileAPI.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/PlaylistGenerator.iml" afterPath="$PROJECT_DIR$/PlaylistGenerator/PlaylistGenerator.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/Main.java" afterPath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MusicFileAPI/src/net/matrixstudios/musicfileapi/MusicFileAPI.java" afterPath="$PROJECT_DIR$/MusicFileAPI/src/net/matrixstudios/musicfileapi/MusicFileAPI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/PlaylistGenerator.java" afterPath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/PlaylistGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/Generator.java" afterPath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/Generator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/SongNotFoundException.java" afterPath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/SongNotFoundException.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FileFinder.java" afterPath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FileFinder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FilenameFilter.java" afterPath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FilenameFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSongFile.java" afterPath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSongFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSong.java" afterPath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSong.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/gui/Window.java" afterPath="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/gui/Window.java" />
     </list>
     <ignored path="PlaylistGenerator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,8 +62,42 @@
       <file leaf-file-name="PlaylistGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/PlaylistGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7297297">
-              <caret line="61" column="44" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.21621622">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Window.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/gui/Window.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextField.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/gui/TextField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+              <folding>
+                <element signature="e#334#335#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#406#407#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MusicFileAPI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MusicFileAPI/src/net/matrixstudios/musicfileapi/MusicFileAPI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -77,10 +107,9 @@
         <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/Generator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <caret line="49" column="61" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1389#1407#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,9 +119,21 @@
         <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FilenameFilter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
               <folding>
                 <element signature="e#1109#1117#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileFinder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FileFinder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+              <folding>
+                <element signature="e#2388#2402#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,15 +163,16 @@
         <option value="$PROJECT_DIR$/PlaylistGenerator/PlaylistGenerator.iml" />
         <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/PlaylistReader.java" />
         <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/PlaylistSong.java" />
-        <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSong.java" />
         <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSongFile.java" />
         <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/SongNotFoundException.java" />
-        <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/gui/Window.java" />
+        <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/Main.java" />
         <option value="$PROJECT_DIR$/MusicFileAPI/src/net/matrixstudios/musicfileapi/MusicFileAPI.java" />
         <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/Generator.java" />
-        <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FilenameFilter.java" />
+        <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSong.java" />
         <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FileFinder.java" />
-        <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/Main.java" />
+        <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FilenameFilter.java" />
+        <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/gui/TextField.java" />
+        <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/gui/Window.java" />
         <option value="$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/PlaylistGenerator.java" />
       </list>
     </option>
@@ -173,9 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -308,12 +348,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="filefinder" />
+              <option name="myItemId" value="playlist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -624,7 +666,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1215" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -633,7 +675,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906324" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39951962" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39848813" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25761318" sideWeight="0.5038204" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -642,12 +684,12 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27242798" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24838012" sideWeight="0.49617955" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24838012" sideWeight="0.49617955" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -663,7 +705,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FilenameFilter.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -672,6 +722,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -724,7 +785,6 @@
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1389#1407#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -733,7 +793,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="e#2388#2402#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -795,7 +857,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1389#1407#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -804,7 +865,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#2388#2402#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -866,24 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSongFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32656023">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="e#677#678#0" expanded="false" />
-            <element signature="e#755#756#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSong.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56458634">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/SongNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -896,19 +941,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MusicFileAPI/src/org/jaudiotagger/FileConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48214287">
           <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,7 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37284234">
           <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,15 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24045801">
           <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MusicFileAPI/src/net/matrixstudios/musicfileapi/MusicFileAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53605014">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,48 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34868422">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="e#1126#1127#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/gui/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.094339624">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FileFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5754717">
-          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-          <folding>
-            <element signature="e#2287#2301#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FilenameFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
-          <folding>
-            <element signature="e#1109#1117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/Generator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1389#1407#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -996,10 +980,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSongFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6486486">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5135135">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/Generator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="61" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FileFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="39" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
+          <folding>
+            <element signature="e#2388#2402#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/filefinder/FilenameFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <element signature="e#1109#1117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/generator/playlist/PlaylistSong.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/gui/TextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MusicFileAPI/src/net/matrixstudios/musicfileapi/MusicFileAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/gui/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PlaylistGenerator/src/net/matrixstudios/playlistgenerator/PlaylistGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7297297">
-          <caret line="61" column="44" selection-start-line="61" selection-start-column="44" selection-end-line="61" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.21621622">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>

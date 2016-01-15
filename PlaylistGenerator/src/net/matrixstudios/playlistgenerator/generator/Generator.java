@@ -43,11 +43,11 @@ public class Generator {
 
         ArrayList<PlaylistSong> songNames = readPlaylist();
 
-        FileFinder fileFinder = new FileFinder(searchDir);
+        FileFinder fileFinder = new FileFinder(new File(searchDir), false);
         for(PlaylistSong songName : songNames) {
             try {
                 File found1 = fileFinder.getMatch(songName.getBandName(), false);
-                FileFinder songFinder = new FileFinder(found1);
+                FileFinder songFinder = new FileFinder(found1, true);
                 File found2 = songFinder.getMatch(songName.getSongName(), true);
                 songs.add(new PlaylistSongFile(songName.getSongName(), songName.getBandName(), found2));
             } catch(FileNotFoundException e) {

@@ -14,6 +14,8 @@ import java.util.regex.Pattern;
  */
 public class FilenameFilter {
 
+    private static String[] trackNumRegexes;
+
     public static String removeExtension(String filename) {
         String[] filenameArray = filename.split("\\.");
         return filenameArray[0];
@@ -22,8 +24,6 @@ public class FilenameFilter {
     private static boolean checkPattern(String regex, String filename) {
         return Pattern.compile(regex).matcher(filename).matches();
     }
-
-    private static String[] trackNumRegexes;
 
     public static void createRegexFile() {
         ArrayList<String> regexes = readRegexFile();
@@ -71,13 +71,6 @@ public class FilenameFilter {
             e.printStackTrace();
         }
     }
-
-    /*
-
-    "(\\d{1,})(\\s?)(\\-?)(\\s?)", //example: 01 - Song.mp3
-    "(.*)(\\s{1,})(\\-)(\\s{1,})(.*)(\\s{1,})(\\-)(\\s{1,})(\\d{1,})(\\s{1,})(\\-)(\\s{1,})", //example: Band - Album - 01 - Song.mp3
-    "(\\w{1,})(\\_)(\\w{1,})(\\_)(\\d{1,})(\\_)"
-     */
 
     public static boolean hasTrackNumInfront(String filename) {
         boolean result = false;

@@ -9,7 +9,8 @@ public class PlaylistSong {
     private String songName;
 
     public PlaylistSong(String data) {
-        String[] dataList = data.split("-");
+        String[] dataList = data.split("(\\s{1})(\\-)(\\s{1})");
+
         songName = dataList[0].trim();
         bandName = dataList[1].trim();
     }

@@ -49,7 +49,7 @@ public class MusicFileAPI {
     public File getFile() { return file; }
 
     public static final String[] SUPPORTED_FILE_EXTENSIONS = {
-        "mp3", "flac", "ogg", "mp4", "aiff", "wav", "wma"
+        "mp3", "flac", "ogg", "mp4", "aiff", "wav", "wma", "m4a"
     };
 
     public static boolean isValidFile(File file) {

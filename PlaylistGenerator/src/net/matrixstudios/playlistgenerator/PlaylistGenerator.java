@@ -4,6 +4,7 @@ import net.matrixstudios.playlistgenerator.generator.Generator;
 import net.matrixstudios.playlistgenerator.generator.SongNotFoundException;
 import net.matrixstudios.playlistgenerator.generator.filefinder.FilenameFilter;
 import net.matrixstudios.playlistgenerator.generator.playlist.PlaylistSongFile;
+import net.matrixstudios.playlistgenerator.gui.TextField;
 import net.matrixstudios.playlistgenerator.gui.Window;
 
 import javax.swing.*;
@@ -45,7 +46,7 @@ public class PlaylistGenerator implements ActionListener {
             e.printStackTrace();
             System.exit(-1);
         } finally {
-            if((returnVal != null)) { System.out.println("Running List Failed!"); }
+            if((returnVal == null)) { System.out.println("Running List Failed!"); }
 
             return returnVal;
         }
@@ -56,22 +57,45 @@ public class PlaylistGenerator implements ActionListener {
         String cmd = ae.getActionCommand().toLowerCase();
         if(cmd.equals("generate")) {
 
-            String testSource = "/mnt/SEAGATE/test.txt";
+            String testSource = "/mnt/SEAGATE/playlists/M.txt";
             String testFolder = "/mnt/SEAGATE/Music";
 
+
+            System.out.println("Playlist: " + getTextFieldData("playlist"));
+            System.out.println("Folder: " + getTextFieldData("search folder"));
             runList(testSource, testFolder);
+
         } else if(cmd.startsWith("playlist")) {
-            //open file finder here
+            JFileChooser fc = new JFileChooser();
+            int returnVal = fc.showOpenDialog(window.getContentPane());
+            if(returnVal == JFileChooser.APPROVE_OPTION) {
+                updateTextField("playlist", fc.getSelectedFile().getAbsolutePath());
+            }
         } else if (cmd.startsWith("search folder")) {
-            //open file finder here
+            JFileChooser fc = new JFileChooser();
+            int returnVal = fc.showOpenDialog(window.getContentPane());
+            if(returnVal == JFileChooser.APPROVE_OPTION) {
+                updateTextField("search folder", fc.getSelectedFile().getAbsolutePath());
+            }
         }
     }
 
-    private JComponent findComponentByActionCmd(String actionCmd) {
-        JTextField jt = null;
-        for(JComponent component : window.getDataComponents()) {
-            //if(component.get)
+    private String getTextFieldData(String name) {
+        for(TextField component : window.getDataComponents()) {
+            if(component.getName().startsWith(name)) {
+                return component.getText();
+            }
         }
-        return null;
+        return "";
+    }
+
+    private void updateTextField(String name, String text) {
+        for(TextField component : window.getDataComponents()) {
+            if(component.getName().startsWith(name)) {
+                component.setText(text);
+                window.repaint();
+                break;
+            }
+        }
     }
 }
