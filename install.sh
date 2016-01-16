@@ -11,9 +11,10 @@ mkdir -v $1"/Movies"
 mkdir -v $1"/Music"
 mkdir -v $1"/Pictures"
 mkdir -v $1"/Other"
+mkdir -v $1"/exts"
 
-cd $1"/Documents"
-cat > extensions.txt << "msg"
+cd $1"/exts"
+cat > docs.txt << "EOF"
 txt
 doc
 docx
@@ -24,22 +25,19 @@ pptx
 odf
 odt
 log
-msg
+EOF
 
-cd ..
-cd $1"/Games"
-cat > extensions.txt << "z"
+cat > games.txt << "EOF"
 rar
 7z
 zip
 iso
 tar
 gz
-z
+EOF
 
-cd ..
-cd $1"/Movies"
-cat > extensions.txt << "f4v"
+
+cat > movies.txt << "EOF"
 webm
 mkv
 flv
@@ -58,10 +56,10 @@ m4v
 3gp
 3g2
 f4v
+EOF
 
-cd ..
-cd $1"/Music"
-cat > extensions.txt << "flac"
+
+cat > music.txt << "EOF"
 m4a
 mp3
 oog
@@ -70,10 +68,10 @@ oga
 wav
 wma
 flac
+EOF
 
-cd ..
-cd $1"/Pictures"
-cat > extensions.txt << "bmp"
+
+cat > pictures.txt << "EOF"
 png
 jpg
 jpeg
@@ -81,5 +79,6 @@ gif
 tiff
 tif
 bmp
+EOF
 
 echo Done!

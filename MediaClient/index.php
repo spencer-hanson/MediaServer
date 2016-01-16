@@ -28,11 +28,11 @@
   
   function echoTableItem($type, $file, $item, $dir) {
 	
-	$picture_extensions = readExtensionFile("media/Pictures/extensions.txt");
-	$movie_extensions = readExtensionFile("media/Movies/extensions.txt");
-	$music_extensions = readExtensionFile("media/Music/extensions.txt");
-	$game_extensions = readExtensionFile("media/Games/extensions.txt");
-	$doc_extensions = readExtensionFile("media/Documents/extensions.txt");
+	$picture_extensions = readExtensionFile("pics.txt");
+	$movie_extensions = readExtensionFile("movies.txt");
+	$music_extensions = readExtensionFile("music.txt");
+	$game_extensions = readExtensionFile("games.txt");
+	$doc_extensions = readExtensionFile("docs.txt");
 	
 	$type = "";
 	
@@ -125,7 +125,6 @@ function str_ends_with($haystack, $needle) {
     if(str_ends_with(strtolower($string), strtolower($ending))){
 		return true;
 	} else { 
-		//echo "<br />" . $string . " doesn't end with \"" . $ending . "<br />";
 		return false;
 	}
 }
@@ -173,7 +172,6 @@ function str_ends_with($haystack, $needle) {
   $rowcount = 0;
   $rowmax = 5;
   $media = scandir(realpath($dir)) or die("Unable to read requested directory!");
-  //echo print_r(array($media));
   foreach($media as &$item) {
 	  if($item != ".") {
 		 $file = $dir . "/" . $item;
@@ -190,7 +188,6 @@ function str_ends_with($haystack, $needle) {
 	}
 	echo "</tr>";
 	echo "</table>";
-  //listAllDirs($dir, "");
 	echo "</div>";
 	echo "</div>";
 	
