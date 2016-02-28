@@ -46,9 +46,13 @@ public class Generator {
         FileFinder fileFinder = new FileFinder(new File(searchDir), false);
         for(PlaylistSong songName : songNames) {
             try {
-                File found1 = fileFinder.getMatch(songName.getBandName(), false);
-                FileFinder songFinder = new FileFinder(found1, true);
-                File found2 = songFinder.getMatch(songName.getSongName(), true);
+                File found1 = fileFinder.getMatch(songName.getBandName(), false, false);//find folder with band name for current song
+                if(!songName.getAlbumName().equals("*")) {
+                    found1 = new FileFinder(found1, true).getMatch(songName.getAlbumName(), false, false);
+
+                }
+                FileFinder songFinder = new FileFinder(found1, true);//find song within found band folder but only return only files
+                File found2 = songFinder.getMatch(songName.getSongName(), true, songName.isLive());
                 songs.add(new PlaylistSongFile(songName.getSongName(), songName.getBandName(), found2));
             } catch(FileNotFoundException e) {
                 throw new SongNotFoundException("Song not found:" + songName.toString(), songName);

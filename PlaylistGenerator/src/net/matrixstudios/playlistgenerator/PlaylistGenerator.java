@@ -36,7 +36,7 @@ public class PlaylistGenerator implements ActionListener {
             System.out.println("Running List \'" + source + "\' in Folder \'" + folder + "\'");
             System.out.flush();
             returnVal = new Generator(source, folder).getGenerateList();
-            Generator.printList(returnVal);
+
             System.out.println("Done Running List!");
         } catch (FileNotFoundException e) {
             System.err.println("File not found: " + e.getMessage());
@@ -57,13 +57,24 @@ public class PlaylistGenerator implements ActionListener {
         String cmd = ae.getActionCommand().toLowerCase();
         if(cmd.equals("generate")) {
 
-            String testSource = "/mnt/SEAGATE/playlists/M.txt";
-            String testFolder = "/mnt/SEAGATE/Music";
+            //String testSource = "/mnt/SEAGATE/playlists/M.txt";
+            //String testFolder = "/mnt/SEAGATE/Music";
+
+            String source = getTextFieldData("playlist");
+            String folder = getTextFieldData("search folder");
+
+            if(source.equals("") || folder.equals("")) {
+                System.out.println("No source or search folder!");
+                return;
+            }
 
 
             System.out.println("Playlist: " + getTextFieldData("playlist"));
             System.out.println("Folder: " + getTextFieldData("search folder"));
-            runList(testSource, testFolder);
+
+            ArrayList<PlaylistSongFile> returnList = runList(source, folder);
+
+            window.getOutputText().setText(playlistToString(returnList));
 
         } else if(cmd.startsWith("playlist")) {
             JFileChooser fc = new JFileChooser();
@@ -73,11 +84,22 @@ public class PlaylistGenerator implements ActionListener {
             }
         } else if (cmd.startsWith("search folder")) {
             JFileChooser fc = new JFileChooser();
+            fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
             int returnVal = fc.showOpenDialog(window.getContentPane());
             if(returnVal == JFileChooser.APPROVE_OPTION) {
                 updateTextField("search folder", fc.getSelectedFile().getAbsolutePath());
             }
         }
+    }
+
+
+    public String playlistToString(ArrayList<PlaylistSongFile> playlist) {
+        String output = "";
+        for(PlaylistSongFile songFile : playlist) {
+            output = output + songFile.getFile().getAbsolutePath() + "\n";
+        }
+
+        return output;
     }
 
     private String getTextFieldData(String name) {

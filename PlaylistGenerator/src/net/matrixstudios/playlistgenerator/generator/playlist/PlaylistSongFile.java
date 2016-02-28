@@ -29,7 +29,7 @@ public class PlaylistSongFile {
 
 
     public PlaylistSongFile(String band, String track, File file) {
-        this.song = new PlaylistSong(band, track);
+        this.song = new PlaylistSong(band, track, "*");
         this.file = file;
     }
 

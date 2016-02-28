@@ -18,6 +18,11 @@ public class Window extends JFrame {
 
     private PlaylistGenerator plGen;
     private ArrayList<TextField> dataComponents;
+    private JTextArea outputText;
+
+    public JTextArea getOutputText() {
+        return outputText;
+    }
 
     public void initComponents() {
         getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
@@ -27,14 +32,17 @@ public class Window extends JFrame {
 
         entirePanel.add(createChooserPanel("Playlist"));
         entirePanel.add(createChooserPanel("Search Folder"));
-        JPanel spacePanel = new JPanel();
-        spacePanel.setPreferredSize(new Dimension(WIDTH, HEIGHT/2));
+
+        outputText = new JTextArea();
+        outputText.setLineWrap(true);
+        outputText.setPreferredSize(new Dimension(WIDTH, HEIGHT/2));
 
         JButton generateBtn = createButton("Generate");
 
 
         add(entirePanel);
-        add(spacePanel);
+
+        add(outputText);
 
         add(generateBtn);
     }

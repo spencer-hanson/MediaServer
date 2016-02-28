@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PlaylistGenerator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PlaylistGenerator_jar</output-path>
+    <root id="archive" name="PlaylistGenerator.jar">
+      <element id="module-output" name="PlaylistGenerator" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/PlaylistGenerator/lib/MusicFileAPI.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
